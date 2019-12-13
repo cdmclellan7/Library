@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <h1>Welcome to Your Library</h1>
+    <button onclick="openForm()">Add New Book</button>
+    <div id="form-popup">
+        <form onsubmit="return false">
+            <fieldset>
+                <legend>New Book Information:</legend>
+                <label for="title">Title</label>
+                <input id="title" type="text" placeholder="Title" name="title" required>
+                <label for="author">Author</label>
+                <input id="author" type="text" placeholder="Author" name="author" required>
+                <label for="pages">Pages</label>
+                <input id="pages" type="number" placeholder="0" min="0" name="pages" required>
+                <label for="read">Have you read this book?</label>
+                <input type="radio" name="read" value="yes">Yes
+                <input type="radio" name="read" value="no">No
+                <button type="submit" onclick="addBookToLibrary()">Submit</button>
+                <button type="button" onclick="closeForm()">Cancel</button>
+            </fieldset>
+        </form>
+    </div>
+    <div id="container"></div>
+
+    <script src="app.js"></script>
+    <script>
+        function openForm() {
+            document.getElementById("form-popup").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("form-popup").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

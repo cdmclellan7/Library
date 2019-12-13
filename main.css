@@ -1,0 +1,12 @@
+.card {
+    border: 1px solid blue;
+    background-color: lightgreen;
+}
+
+.delete-btn {
+    margin: 10px;
+}
+
+#form-popup {
+    display: none;
+}
